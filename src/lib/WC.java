@@ -1,6 +1,6 @@
 package lib;
 
-class WC{
+public class WC{
 	private String fileName;
 	private String content;
 
@@ -14,7 +14,7 @@ class WC{
 	}
 
 	public int countWords(){
-		return content.split("\\W+").length;
+		return content.split("\\s+").length;
 	}
 
 	public int countLines(){

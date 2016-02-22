@@ -2,14 +2,14 @@ package fs;
 
 import java.io.*;
 
-class FileReaderUtil{
+public class FileReaderUtil{
 	public String readFile(File filename) {
         String line;
         StringBuilder sb = new StringBuilder("");
         try {
             BufferedReader br = new BufferedReader(new FileReader(filename));
             while ((line = br.readLine()) != null) {
-                sb.append(line).append("\r\n");
+                sb.append(line).append("\n");
             }
         } catch (FileNotFoundException e){
             System.err.println("File not Found");
