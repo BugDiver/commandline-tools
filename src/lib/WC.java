@@ -1,8 +1,5 @@
 package lib;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 class WC{
 	private String fileName;
 	private String content;
