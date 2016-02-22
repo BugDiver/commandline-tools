@@ -1,0 +1,1 @@
+sh run-scripts/compile.sh && sh run-scripts/runTest.sh

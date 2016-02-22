@@ -1,0 +1,1 @@
+java -cp "out:dependencies/junit-4.12.jar:dependencies/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore lib.WCTest
