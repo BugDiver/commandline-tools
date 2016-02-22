@@ -20,7 +20,24 @@ public class WC{
 	public int countLines(){
 		return content.split("\\n+").length-1;
 	}
-
+	public String partialDetails(String option){
+		StringBuilder sb = new StringBuilder("\t"); 
+		switch (option) {
+			case "-l":
+				sb.append(countLines()).append("\t");
+				break;
+			case "-w":
+				sb.append(countWords()).append("\t");
+				break;
+			case "-c":
+				sb.append(countChars()).append("\t");
+				break;
+			default:
+				sb.append("Illegal Option!!");
+		}
+		sb.append(fileName);
+		return sb.toString();
+	}
 	public String formatedResult(){
 		StringBuilder sb = new StringBuilder(""); 
 		sb.append("\t").append(countLines());

@@ -40,4 +40,29 @@ public class WCTest {
 		String expected = "\t1\t5\t26\tsomething";
 		assertEquals(wc.formatedResult() , expected);
 	}
+
+	@Test
+	public void testForPartialDetailOfAGivenString1() {
+		String text = "Hello world!!\nHow are you?";
+		WC wc = new WC(text,"something");
+		String expected = "\t26\tsomething";
+		assertEquals(wc.partialDetails("-c") , expected);
+	}
+
+	@Test
+	public void testForPartialDetailOfAGivenString2() {
+		String text = "Hello world!!\nHow are you?";
+		WC wc = new WC(text,"something");
+		String expected = "\t1\tsomething";
+		assertEquals(wc.partialDetails("-l") , expected);
+	}
+
+	@Test
+	public void testForPartialDetailOfAGivenString3() {
+		String text = "Hello world!!\nHow are you?";
+		WC wc = new WC(text,"something");
+		String expected = "\t5\tsomething";
+		assertEquals(wc.partialDetails("-w") , expected);
+	}
+	
 }
